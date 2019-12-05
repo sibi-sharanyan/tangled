@@ -1,13 +1,122 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html { 
+   font-size: 62.5%;
+}
+
+.mainimg {
+  object-fit: none; 
+  object-position: center;
+  width: 50rem;
+  height: 40rem;
+}
+
+.container {
+  height: 97vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.square {
+  height: 5rem;
+  width: 5rem;
+  background-color: white;
+  border: .5rem solid black;
+  border-radius: 1rem;
+  transition: all .1s linear;
+}
+
+.squareHover {
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  border: .5rem solid black;
+  border-radius: 1rem;
+  transition: all .1s linear;
+}
+
+.boxes {
+  width: 40%;
+  /* margin-top: 10rem; */
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.tile {
+  height: 5rem;
+  width: 5rem;
+  background-color: yellow;
+  border: .5rem solid black;
+  color: black;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.button {
+  border: .2rem solid black;
+  display: inline-block;
+  padding: 2rem;
+
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 4rem;    
+  font-family: 'Staatliches', cursive; 
+  background-color: green;
+  color: white; 
+  box-shadow: 0 4px 6px 0 hsla(0 , 0% , 0% ,0.2);
+  transition: transform .3s ease-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-0.6rem);
+}
+
+.button:focus {
+  outline: none;
+  
+}
+
+
+
+
+@media only screen and (max-height: 800px) {
+  html { 
+    font-size: 45%;
+ }
+}
+
+@media only screen and (max-height: 700px) {
+  html { 
+    font-size: 40%;
+ }
+}
+
+@media only screen and (max-width: 680px) {
+  html { 
+    font-size: 35%;
+ }
+
+ .container {
+   height: 85vh;
+ }
+
+ .boxes {
+   width: 90%;
+ }
 }
